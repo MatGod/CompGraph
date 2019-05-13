@@ -1,0 +1,38 @@
+﻿  main.cpp
+d:\study\compgraph\lab_1\lab_1\main.cpp(46): warning C4244: =: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+d:\study\compgraph\lab_1\lab_1\main.cpp(47): warning C4244: =: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+d:\study\compgraph\lab_1\lab_1\main.cpp(61): warning C4244: =: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+d:\study\compgraph\lab_1\lab_1\main.cpp(62): warning C4244: =: преобразование "T" в "T", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+  Lab_1.vcxproj -> D:\Study\CompGraph\Lab_1\x64\Debug\Lab_1.exe

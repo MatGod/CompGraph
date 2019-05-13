@@ -1,0 +1,3 @@
+﻿  main.cpp
+d:\study\compgraph\lab_3\lab_3\main.cpp(16): warning C4244: аргумент: преобразование "float" в "unsigned int", возможна потеря данных
+  Lab_3.vcxproj -> D:\Study\CompGraph\Lab_3\x64\Debug\Lab_3.exe
