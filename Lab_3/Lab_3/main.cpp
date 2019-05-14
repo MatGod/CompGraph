@@ -43,7 +43,7 @@ int main() {
 			}
 
 			window.clear();
-			plane.Draw(&window, sf::Color::Green);
+			plane.Draw(&window, sf::Color::Green, sf::Color::Red);
 			window.display();
 		}
 	}

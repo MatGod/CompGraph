@@ -7,6 +7,10 @@ using namespace boost::numeric::ublas;
 
 Point::Point() {}
 
+Point::Point(const Point &p) {
+	this->pos = p.pos;
+}
+
 Point::Point(float x, float y, float z) {
 	pos.x = x;
 	pos.y = y;
@@ -14,10 +18,10 @@ Point::Point(float x, float y, float z) {
 }
 
 sf::Vector2f Point::Isometric(float xSize, float ySize) {
-	float dist = 1000.0f;
-	float sx = xSize / 2 + pos.x * dist / (pos.z + dist),
-		sy = ySize / 2 - pos.y * dist / (pos.z + dist);
-	return sf::Vector2f(sx, sy);
+	//float dist = 1000.0f;
+	//float sx = xSize / 2 + pos.x * dist / (pos.z + dist),
+		//sy = ySize / 2 - pos.y * dist / (pos.z + dist);
+	return sf::Vector2f(pos.x + xSize / 2, ySize / 2 - pos.y);
 }
 
 void Point::SetPosition(float x, float y, float z) {

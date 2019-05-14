@@ -9,6 +9,7 @@ private:
 	sf::Vector3f pos;
 public:
 	Point();
+	Point(const Point&);
 	Point(float, float, float);
 	sf::Vector2f Isometric(float, float);
 	void SetPosition(float, float, float);

@@ -1,3 +1,22 @@
-﻿  main.cpp
-d:\study\compgraph\lab_3\lab_3\main.cpp(17): warning C4244: аргумент: преобразование "float" в "unsigned int", возможна потеря данных
+﻿  Point.cpp
+d:\study\compgraph\lab_3\lab_3\point.cpp(46): warning C4244: =: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+d:\study\compgraph\lab_3\lab_3\point.cpp(47): warning C4244: =: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+d:\study\compgraph\lab_3\lab_3\point.cpp(56): warning C4244: =: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+d:\study\compgraph\lab_3\lab_3\point.cpp(58): warning C4244: =: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
   Lab_3.vcxproj -> D:\Study\CompGraph\Lab_3\x64\Debug\Lab_3.exe
