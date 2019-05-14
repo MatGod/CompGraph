@@ -3,6 +3,7 @@
 #include <boost\numeric\ublas\io.hpp>
 
 #include "Point.h"
+#include "FourPointLinearPlane.h"
 
 using namespace boost::numeric::ublas;
 
@@ -14,44 +15,37 @@ int main() {
 
 	float ww = 1366, wh = 768;
 	sf::RenderWindow window(sf::VideoMode(ww, wh), "Lab_3", sf::Style::Default, settings);
-	Point p1(300, 200, 0);
-	Point p2(300, 200, 300);
-	Point p3(-300, 200, 300);
-	Point p4(-300, 200, 0);
-	sf::ConvexShape shape;
-	shape.setPointCount(4);
-	shape.setFillColor(sf::Color::Green);
-	shape.setPoint(0, p1.Isometric(ww, wh));
-	shape.setPoint(1, p2.Isometric(ww, wh));
-	shape.setPoint(2, p3.Isometric(ww, wh));
-	shape.setPoint(3, p4.Isometric(ww, wh));
-	Point p5(300, 200, 0);
-	Point p6(300, 200, 300);
-	Point p7(300, -400, 300);
-	Point p8(300, -400, 0); 
-	sf::ConvexShape shape1;
-	shape1.setPointCount(4);
-	shape1.setFillColor(sf::Color::Red);
-	shape1.setPoint(0, p5.Isometric(ww, wh));
-	shape1.setPoint(1, p6.Isometric(ww, wh));
-	shape1.setPoint(2, p7.Isometric(ww, wh));
-	shape1.setPoint(3, p8.Isometric(ww, wh));
+
+	matrix<Point> m(2, 2);
+	m(0, 0) = Point(-300, -200, 0);
+	m(0, 1) = Point(300, -200, 0);
+	m(1, 0) = Point(-300, -200, 300);
+	m(1, 1) = Point(300, -200, 300);
+
+	FourPointLinearPlane plane(m);
 	
 
 	while (window.isOpen())
 	{
 		sf::Event event;
-		while (window.pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
+		while (window.pollEvent(event)) {
+			switch (event.type) {
+			case sf::Event::KeyPressed:
+				if (event.key.code == sf::Keyboard::Up)	plane.RotateX(1);
+				if (event.key.code == sf::Keyboard::Down) plane.RotateX(-1);
+				if (event.key.code == sf::Keyboard::Left) plane.RotateY(1);
+				if (event.key.code == sf::Keyboard::Right) plane.RotateY(-1);
+				break;
+
+			case sf::Event::Closed:
 				window.close();
+				break;
+			}
+
+			window.clear();
+			plane.Draw(&window, sf::Color::Green);
+			window.display();
 		}
-
-		window.clear();
-		window.draw(shape);
-		window.draw(shape1);
-		window.display();
 	}
-
 	return 0;
 }
