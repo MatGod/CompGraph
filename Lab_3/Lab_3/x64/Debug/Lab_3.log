@@ -1,22 +1,24 @@
-﻿  Point.cpp
-d:\study\compgraph\lab_3\lab_3\point.cpp(46): warning C4244: =: преобразование "double" в "T", возможна потеря данных
+﻿  FourPointLinearPlane.cpp
+d:\study\compgraph\lab_3\lab_3\fourpointlinearplane.cpp(27): warning C4244: аргумент: преобразование "float" в "sf::Uint8", возможна потеря данных
+d:\study\compgraph\lab_3\lab_3\fourpointlinearplane.cpp(28): warning C4244: аргумент: преобразование "float" в "sf::Uint8", возможна потеря данных
+d:\study\compgraph\lab_3\lab_3\fourpointlinearplane.cpp(29): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
-              T=float
+              T=unsigned int
           ]
-d:\study\compgraph\lab_3\lab_3\point.cpp(47): warning C4244: =: преобразование "double" в "T", возможна потеря данных
+d:\study\compgraph\lab_3\lab_3\fourpointlinearplane.cpp(30): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
-              T=float
+              T=unsigned int
           ]
-d:\study\compgraph\lab_3\lab_3\point.cpp(56): warning C4244: =: преобразование "double" в "T", возможна потеря данных
+d:\study\compgraph\lab_3\lab_3\fourpointlinearplane.cpp(31): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
-              T=float
+              T=unsigned int
           ]
-d:\study\compgraph\lab_3\lab_3\point.cpp(58): warning C4244: =: преобразование "double" в "T", возможна потеря данных
+d:\study\compgraph\lab_3\lab_3\fourpointlinearplane.cpp(32): warning C4244: аргумент: преобразование "T" в "float", возможна потеря данных
           with
           [
-              T=float
+              T=unsigned int
           ]
   Lab_3.vcxproj -> D:\Study\CompGraph\Lab_3\x64\Debug\Lab_3.exe

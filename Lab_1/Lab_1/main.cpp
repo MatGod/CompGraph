@@ -6,7 +6,7 @@ using namespace boost::numeric::ublas;
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Lab_1", sf::Style::Fullscreen);
+	sf::RenderWindow window(sf::VideoMode(1366, 768), "Lab_1", sf::Style::Default);
 	//Круг 1(малый)
 	sf::CircleShape circle_1(0.f);
 	sf::Vector2f circle_1Pos;
@@ -124,8 +124,10 @@ int main()
 			vector<float> point2Vector(3);
 			//Поворот точки и её копии до параллельности текущих отрезков необходимым касательным
 
-			point1Vector = prod(point1Vector, moveMatrix);
 			point2Vector = point1Vector;
+			std::cout << point1Vector << std::endl;
+			tang_1[1].position.x = point1Vector(0);
+			tang_1[1].position.y = point1Vector(1);
 
 			rotateMatrix(0, 0) = tangLength / sqrt(pow(circle_2Pos.x - circle_1Pos.x, 2) + pow(circle_2Pos.y - circle_1Pos.y, 2));
 			rotateMatrix(0, 1) = (circle_2Rad - circle_1Rad) / sqrt(pow(circle_2Pos.x - circle_1Pos.x, 2) + pow(circle_2Pos.y - circle_1Pos.y, 2));

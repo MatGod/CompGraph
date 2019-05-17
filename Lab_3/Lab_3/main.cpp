@@ -17,10 +17,10 @@ int main() {
 	sf::RenderWindow window(sf::VideoMode(ww, wh), "Lab_3", sf::Style::Default, settings);
 
 	matrix<Point> m(2, 2);
-	m(0, 0) = Point(-300, -200, 0);
-	m(0, 1) = Point(300, -200, 0);
-	m(1, 0) = Point(-300, -200, 300);
-	m(1, 1) = Point(300, -200, 300);
+	m(0, 0) = Point(-400, -200, 300);
+	m(0, 1) = Point(300, -200, 300);
+	m(1, 0) = Point(-300, -500, 300);
+	m(1, 1) = Point(300, -800, 300);
 
 	FourPointLinearPlane plane(m);
 	

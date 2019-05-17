@@ -2,6 +2,8 @@
 
 
 
+FourPointLinearPlane::FourPointLinearPlane() {}
+
 void FourPointLinearPlane::setNorm() {
 	Point a(points(0, 1) - points(0, 0)),
 		b(points(1, 0) - points(0, 0));
@@ -10,8 +12,6 @@ void FourPointLinearPlane::setNorm() {
 		z = a.GetPosition().x * b.GetPosition().y - a.GetPosition().y * b.GetPosition().x;
 	norm = sf::Vector3f(x, y, z);
 }
-
-FourPointLinearPlane::FourPointLinearPlane() {}
 
 FourPointLinearPlane::FourPointLinearPlane(matrix<Point> m) {
 	points.resize(2, 2);
